@@ -11,7 +11,7 @@ jobs:
         with:
           root_file: smyth_resume.tex 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+        uses: softprops/action-gh-release@v1
         with:
           name: PDF
-          path: main.pdf
+          path: smyth_resume.pdf

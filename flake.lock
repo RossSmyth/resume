@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1750915984,
+        "narHash": "sha256-H35GgPwCiZF7vOX6y6/9cbC3Bt8xZyZgy3p2VIENRfM=",
+        "rev": "30a61f056ac492e3b7cdcb69c1e6abdcf00e39cf",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre820854.30a61f056ac4/nixexprs.tar.xz?rev=30a61f056ac492e3b7cdcb69c1e6abdcf00e39cf"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz"
+      }
+    },
+    "press": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1750550940,
+        "narHash": "sha256-2eZcFZLjmH0/3w48Hp0R6jQqAXMAk96hFdISFmZ5BbM=",
+        "owner": "RossSmyth",
+        "repo": "press",
+        "rev": "f85612ce6a64bb418f88eebd8a7114351304b6d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RossSmyth",
+        "repo": "press",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "press": "press"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

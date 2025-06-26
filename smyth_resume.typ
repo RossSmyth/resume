@@ -1,10 +1,13 @@
 #set par(justify: true)
-#set text(font: "Arial", size: 10pt, fallback: false)
-#set page(paper: "us-letter", header: text(12pt)[
-  *Christopher Ross Smyth*
-  #h(1fr)
-  *Résumé*
-], numbering: "p. 1 of 1")
+#set page(
+  paper: "us-letter",
+  header: text(12pt)[
+    *Christopher Ross Smyth*
+    #h(1fr)
+    *Résumé*
+  ],
+  numbering: "p. 1 of 1",
+)
 
 // Headers for the left column of the page
 #let col_hed(cont) = heading(outlined: true, bookmarked: true)[
@@ -33,8 +36,8 @@
       LinkedIn: #link("https://www.linkedin.com/in/rosssmyth")[LinkedIn.com/in/rosssmyth]
     ],
   ),
-  col_hed[Overview],
-  [Software developer],
+
+  col_hed[Overview], [Software developer],
   col_hed[Education],
   [
     #link("https://www.mtu.edu/")[*Michigan Technological University*], Houghton, MI
@@ -45,6 +48,7 @@
       [Minor in Aerospace Engineering],
     )
   ],
+
   col_hed[Experience],
   [
     #link("https://www.electrocraft.com/")[*ElectroCraft*], Saline, MI #h(1fr) February
@@ -62,6 +66,7 @@
       [Architect and author of new software suite for testing company's product],
     )
   ],
+
   col_hed[Skills],
   box(height: 6em, columns(3, gutter: 3pt)[
     - Python
@@ -76,6 +81,7 @@
     - GitHub
     - Some Docker
   ]),
+
   col_hed[Leadership],
   [
     *ADC Systems Engineer*, #link("https://aerospace.mtu.edu/enterprise/")[MTU Aerospace Enterprise] #h(1fr) December
@@ -87,8 +93,9 @@
       architecting, and testing the attitude determination and control subsystem of
       small spacecraft.]
     *Eagle Scount*, Troop 425
-     
+
   ],
+
   col_hed[Work History],
   [
     - *Intern*, Orbion Space Technology #h(1fr) May 2019 to June 2021

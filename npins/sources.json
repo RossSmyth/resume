@@ -1,0 +1,23 @@
+{
+  "pins": {
+    "nixpkgs": {
+      "type": "Tarball",
+      "url": "https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz",
+      "hash": "sha256-WGjBfvXv/mcg5yBg+AtK1Q3FHyXfjAAeJROmg7DLYfM="
+    },
+    "press": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "RossSmyth",
+        "repo": "press"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "17a5a856d44c415b7bac4840e0667e35977e7d87",
+      "url": "https://github.com/RossSmyth/press/archive/17a5a856d44c415b7bac4840e0667e35977e7d87.tar.gz",
+      "hash": "sha256-093epL0oAUhebPvf4x2PJh7jtZM36e7ZYqyFkDkpRD0="
+    }
+  },
+  "version": 7
+}

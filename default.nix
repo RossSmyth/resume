@@ -20,11 +20,14 @@ let
   ];
 in
 pkgs.buildTypstDocument {
-  name = "resume";
+  pname = "resume";
+  version = "none";
+
   src = fs.toSource {
     root = ./.;
     fileset = files;
   };
+
   file = "smyth_resume.typ";
   fonts = [ pkgs.liberation_ttf ];
 }

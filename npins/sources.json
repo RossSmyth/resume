@@ -1,9 +1,10 @@
 {
   "pins": {
     "nixpkgs": {
-      "type": "Tarball",
+      "type": "Url",
       "url": "https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz",
-      "hash": "sha256-WGjBfvXv/mcg5yBg+AtK1Q3FHyXfjAAeJROmg7DLYfM="
+      "unpack": true,
+      "hash": "sha256-inDx/w70OSJoJPqtKh0BrzAsbZZhpya7YgS43jHnhwg="
     },
     "press": {
       "type": "Git",
@@ -14,10 +15,10 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "17a5a856d44c415b7bac4840e0667e35977e7d87",
-      "url": "https://github.com/RossSmyth/press/archive/17a5a856d44c415b7bac4840e0667e35977e7d87.tar.gz",
-      "hash": "sha256-093epL0oAUhebPvf4x2PJh7jtZM36e7ZYqyFkDkpRD0="
+      "revision": "d1c91cbb4ff19cb14760796ea5b720e030314f01",
+      "url": "https://github.com/RossSmyth/press/archive/d1c91cbb4ff19cb14760796ea5b720e030314f01.tar.gz",
+      "hash": "sha256-iqkiB4itxCS0RUTLuaoZ2ruMpUU4UZXTMyh1WUxDXB4="
     }
   },
-  "version": 7
+  "version": 8
 }

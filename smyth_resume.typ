@@ -17,53 +17,59 @@
 // Lists of stuff
 #let stuff_list(..stuff) = list(indent: 1em, ..stuff)
 
+// Obvious links
+#let aLink(uri, content) = link(uri, underline(text(blue)[#content]))
+
 #grid(
   columns: (2.5cm, 1fr),
   gutter: 0.5cm,
-  col_hed[Contact Information],
+  col_hed[Contact\
+    Information],
   [
     / Email: #link("mailto:quick.lock9947@fastmail.com")
-    / GitHub: #link("https://github.com/RossSmyth")[GitHub.com/RossSmyth]
-    / LinkedIn: #link(
+    / GitHub: #aLink("https://github.com/RossSmyth")[GitHub.com/RossSmyth]
+    / LinkedIn: #aLink(
         "https://www.linkedin.com/in/rosssmyth",
       )[LinkedIn.com/in/rosssmyth]
   ],
 
   col_hed[Overview],
-  [Software developer who is extremely passionate about making software that
-    makes sense. Current main job is writing firmware that makes motors spin
-    exactly as customer's want. But also writing Rust software for interfacing
-    with with said firmware, writing Nix for building everything reproducibly,
-    and Typst so everything is documented. Able to make customers happy while
-    also improving internal processes so that projects in the future can build
-    on today's success.],
+  [Software developer who is passionate about making software that
+    makes sense. At ElectroCraft primarily writing embedded firmware for motor drives.
+    Primarily using C, Rust, and Nix to make coherent software suites from the bare-metal firmware,
+    to user-facing software. Major open-source contributor, primarily to #aLink("https://github.com/NixOS/nixpkgs/")[Nixpkgs],
+    the project behind the NixOS Linux distribution.],
 
   col_hed[Education],
   [
-    #link("https://www.mtu.edu/")[*Michigan Technological University*],
-    Houghton, MI B.S. Engineering, May 2021 #h(1fr) GPA: 3.57 (4.0 scale)
+    #aLink("https://www.mtu.edu/")[*Michigan Technological University*],
+    Houghton, MI B.S. Engineering, May 2021
   ],
 
   col_hed[Experience],
   [
-    #link("https://www.electrocraft.com/")[*ElectroCraft*], Saline, MI #h(1fr)
-    February 2023 to Present \
-    #underline[Embedded Software Engineer] #h(1fr) February 2023 to Present \
+    #aLink("https://www.electrocraft.com/")[*ElectroCraft*], Saline, MI #h(1fr)
+    February 2023 to Present\
+    #underline[Embedded Software Engineer] #h(1fr)\
     #stuff_list(
-      [End-to-end firmware development lifecycle of two launched products],
-      [Rapid prototyping of features for customers.],
-      [Ability to turn around bug fixes for customers extremly fast.],
-      [Stood up internal infrastructure for testing firmware],
-      [Kicked-off migration of software into Git repos],
+      [End-to-end firmware development lifecycle of two launched products:
+        one a consumer-facing off-the-shelf product, the other a multi-million dollar contract for a lab equipment supplier.],
+      [Turned around many bug fixes for customers within minutes at best, leading to great customer relations.],
+      [Created all software infrastructure from the ground-up. Previously there was not any revision control.
+        Now each project I work on gets migrated into GitHub, has continuous-integration added,
+        and tests created and automated in CI. All infrastructure uses GitHub Actions and Nix.],
     )
-    #link("https://orbionspace.com/")[*Orbion Space Technology*], Houghton, MI
+    #aLink("https://orbionspace.com/")[*Orbion Space Technology*], Houghton, MI
     #h(1fr) May 2019 to February 2023 \
-    #underline[Lead Test Software Engineer] #h(1fr) June 2021 to February 2023 \
+    #underline[Lead Test Software Engineer] #h(1fr)\
     #stuff_list(
       [Developed extensive data analysis and visualization tools for internal
-        testing],
-      [Successful ground-up rewrite of main testing suite from a decade-old grad
-        students' tool, to a production-ready testing software suite.],
+        testing. Streamlined the time it took for engineers to see data in a presentable format from days or weeks, to hours.
+        A popular program was one that ingested coordinate-measuring machine data, and output a portable HTML file that showed a 3D model of
+        the thruster and a heatmap of the measured erosion.],
+      [Took a decade old graduate-student project, and led a rewrite to a more modular and maintainable solution.
+        Able to complete a feature-parity rewrite in three-months, and a superior version with pluggable drivers,
+        a domain-specific language, and continuous limit monitoring in six months.],
     )
   ],
 
@@ -79,5 +85,16 @@
 
     [- *Intern* Orbion Space Technology], [May 2019 to June 2021],
     [- *Intern* Keweenaw Research Center], [May 2018 to April 2019],
+  ),
+
+  col_hed[Hobbies],
+  stuff_list(
+    [Translating manga],
+    aLink("https://ebird.org/profile/OTYxNzQ2NQ/US-MI")[Birding],
+    aLink(
+      "https://github.com/NixOS/nixpkgs/pulls/RossSmyth",
+    )[Open-source contribution,]
+      + [ primarily improving the developer experience for Nixpkgs],
+    aLink("https://cats.rsmyth.net/")[Playing with my cats],
   ),
 )

@@ -4,7 +4,7 @@
       "type": "Url",
       "url": "https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz",
       "unpack": true,
-      "hash": "sha256-inDx/w70OSJoJPqtKh0BrzAsbZZhpya7YgS43jHnhwg="
+      "hash": "sha256-+GVwKnbbSmf4cWMJyRzvw8H5yFknmkLoPD5v6snqPzo="
     },
     "press": {
       "type": "Git",
